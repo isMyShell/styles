@@ -1,0 +1,124 @@
+@border-base-color:red;
+//四边 1px边框
+.border-1px{
+  position: relative;
+}
+.border-1px:after {
+    position: absolute;
+    top:0;
+    left: 0;
+    border: 1px solid @border-base-color;
+    content: '';
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+//底部边框
+.border-bottom-1px{
+  position: relative;
+}
+.border-bottom-1px:after{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    content: '';
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+//顶部边框
+.border-top-1px{
+  position: relative;
+}
+.border-top-1px:after{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    border-top: 1px solid #000;
+    content: '';
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+//左边
+.border-left-1px {
+  position: relative;
+}
+.border-left-1px:after {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    border-left: 1px solid #000;
+    content: '';
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+//右边
+.border-right-1px {
+  position: relative;
+}
+.border-right-1px:after {
+    position: absolute;
+    top:0;
+    right:0;
+    height:100%;
+    border-right: 1px solid #000;
+    content: '';
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .border-top-1px:after {
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+    .border-bottom-1px:after {
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+    .border-left-1px:after {
+        -webkit-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+    }
+    .border-right-1px:after {
+        -webkit-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+    }
+    .border-1px:after{
+      height: 200%;
+      width: 200%;
+      -webkit-transform: scale(0.5,0.5);
+      transform: scale(0.5,0.5);
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .border-top-1px:after {
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+    .border-bottom-1px:after {
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+    .border-left-1px:after {
+        -webkit-transform: scaleX(0.33);
+        transform: scaleX(0.33);
+    }
+    .border-right-1px:after {
+        -webkit-transform: scaleX(0.33);
+        transform: scaleX(0.33);
+    }
+    .border-1px:after{
+      height: 300%;
+      width: 300%;
+      -webkit-transform: scale(0.33,0.33);
+      transform: scale(0.33,0.33);
+    }
+}
